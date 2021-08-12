@@ -95,7 +95,7 @@ var ProcessEvents = function(game){
         if(e.key === "ArrowRight" || e.key.toLocaleUpperCase() === "D"){
             game.player.bmp.x += SPEED;
         }else if(e.key === "ArrowLeft" || e.key.toLocaleUpperCase() === "A"){
-            game.player.bmp.x -= SPEED;
+            SmoothLeftMove(game, SPEED);
         }else if(e.key === "Enter"){
             DrawGame(game);
             DIFFICULTY = 2;
@@ -105,6 +105,13 @@ var ProcessEvents = function(game){
         }
         PlayerOverlaps(game.player)
     });
+}
+
+var SmoothLeftMove = function(game, speed)
+{
+    for (let index = 0; index < speed; index++) {
+        game.player.bmp.x--;
+    }
 }
 
 var DrawBitmap = function(data, x, y){

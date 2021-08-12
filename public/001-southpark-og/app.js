@@ -155,7 +155,7 @@ var DrawGame = function(game)
     SetupBarrier(game, 200);
     CoverOverlap();
     game.scoreCount = 0;
-    game.score = DrawText("Score: 0", "red", "Montserrat", 20, 0, 0);
+    game.score = DrawText("score: 0", "red", "Montserrat", 20, 0, 0);
     game_sound.play();
 }
 

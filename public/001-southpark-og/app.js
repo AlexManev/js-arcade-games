@@ -180,7 +180,7 @@ var GameLoop = function(delta){
         SPEED += SPEED_UP;
     }
     game.scoreCount += DIFFICULTY;
-    game.score.text = 'Score: '+Math.floor(game.scoreCount) +'\nHighscore: '+Math.floor(game.highScore);
+    game.score.text = 'score: '+Math.floor(game.scoreCount) +'\nhighscore: '+Math.floor(game.highScore);
 }
 
 var Main = function(){
